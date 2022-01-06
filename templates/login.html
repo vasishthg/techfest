@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Metset Login</title>
+		<link rel="shortcut icon" href="{{url_for('static', filename='sheesh.png')}}" type="image/x-icon">
+		<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gruppo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="preloader"><h1 class="preloadertxt" style="color: black; font-family: 'Gruppo';">Metset.</h1>
+			<center><div class="loader"></div></center>
+		   </div>
+			<div class="header" style="padding-top: 0.5em;">
+				
+				<a href="/" style="color: black; text-decoration: none;"><p class="logo" style='font-family: "Gruppo";font-size: 2.3em;margin-left: 0.3em;display: inline;'>Me<u style="text-underline-offset: 0.2em;">tset</u>.</p></a>
+				<!-- {% if current_user %}
+					<img src="{{current_user.avatar_url}}" class="dropbtn" style="max-width: 2.5em; display: inline; border-radius: 50%; float: right; padding-left: 2em; padding-right: 1.5em;padding-top: 0.5em;" onclick="myFunction()">
+					<div id="myDropdown" class="dropdown-content" style="float: right;">
+						<p>Logged in {{current_user.username}}#{{current_user.discriminator}}</p>
+						<p>ID: {{current_user.id}}</p>
+						<a href="/user">User Details</a>
+						<a href="/logout">Logout</a>
+						</div> -->
+		
+						
+					<!-- {% else %} -->
+					<!-- {% endif %} -->
+					<a href="/register" class="appbtn" style="text-decoration: none;float: right; font-family: 'Gruppo';display: inline; font-weight: 600; font-size: 0.8em; display: inline; float: right;padding-right: 1em; margin-top: 0.5em;margin-left: 1.5em;">Register</a>
+
+			  <div style="display: inline;" class="sheesh"> <a href="/" style="color:black;"> <p style="display: inline; float: right; font-family: 'Gruppo'; padding-left: 1em; font-size: 1.3em;vertical-align:middle; ">Contact</p></a></div>
+			   <div style="display: inline;" class="sheesh"> <a href="#" style="color:black;"><p style="display: inline; float: right; font-family: 'Gruppo'; padding-left: 1em; font-size: 1.3em;vertical-align:middle;">Services</p></a></div>
+			  <div style="display: inline;" class="sheesh"> <a href="#" style="color:black;"> <p style="display: inline; float: right; font-family: 'Gruppo'; padding-left: 1em; font-size: 1.3em;vertical-align:middle;">About</p></a></div>
+			 <div style="display: inline;" class="sheesh"> <a href="#" style="color:black;">  <p style="display: inline; float: right; font-family: 'Gruppo'; padding-left: 1em; font-size: 1.3em;vertical-align:middle;">Home</p></a></div>
+			</div>
+			<br>
+			<br>
+<br>
+<br>
+			<br>
+		<div class="login">
+			<div class="links">
+			</div>
+			<form action="{{ url_for('login') }}" method="post">
+				<label for="username" style="font-family: 'Raleway';text-align: center; font-size: 26px; font-weight: normal; display: flex; justify-content: center; width: 78%;">Username</label><br>
+				<input type="text" name="username" placeholder="Type username here...." id="username" required class="owo" style="font-family: 'Montserrat';"><br>
+<br>
+				<label for="password" style="font-family: 'Raleway';text-align: center; font-size: 26px; font-weight: normal; display: flex; justify-content: center; width: 78%;	">Password</label><br>
+				<input type="password" name="password" placeholder="Type password here...." id="password" required class="owo" style="font-family:'Montserrat';" autocomplete="off"><br><br><br>
+				<center style="width:75%;"><input type="submit" value="Login" class="rickastley" ></center>
+				
+			</form>
+		</div>
+	</body>
+</html>
+<script>
+	var delaylol = 2500;
+window.onload =setTimeout(function(){
+     //hide the preloader
+     document.querySelector(".preloader").style.display = "none";
+     document.querySelector(".preloader").style.background = "none";
+}, delaylol);
+</script>
