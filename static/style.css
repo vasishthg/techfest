@@ -257,3 +257,65 @@ font-size: 0.8em;
     font-size: 0.8em;
     float: left;
 }
+.reginput{
+    width: calc(444px/1.3);
+height: calc(117px/1.6);
+
+background: #232323;
+border-radius: 15px;
+border: none;
+
+color: white;
+padding-left: 2em;
+}
+.reginput::placeholder{
+    display: flex;
+align-items: center;
+padding-left: 1em;
+font-family: 'GothamBook';
+font-weight: 900;
+vertical-align: middle;
+}
+.reginput:focus{
+    border:none;
+    outline: none;
+}
+.reginput2{
+    width: calc(942px/1.1);
+height: calc(117px/1.1);
+
+background: #232323;
+border-radius: 15px;
+border: none;
+color: white;
+padding-left: 2em;
+}
+.reginput2::placeholder{
+    
+    display: flex;
+align-items: center;
+padding-left: 1em;
+font-family: 'GothamBook';
+font-weight: 900;
+vertical-align: middle;
+}
+.reginput2:focus{
+    border:none;
+    outline: none;
+}
+.msg{
+    font-family: 'GothamBold';
+    font-size: 1em;
+    background: rgba(12, 12, 12, 0);
+    border-radius: 0.5em;
+    width: 18%;
+    padding: 1em 1em 1em 1em;
+}
+.regbtn{
+    font-family: 'GothamBold';
+    background: white;
+    padding: 1em 1em 1em 1em;
+    border-radius: calc(15px/1.5);
+    border:none;
+    cursor: pointer;
+}
