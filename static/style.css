@@ -314,7 +314,7 @@ vertical-align: middle;
 .regbtn{
     font-family: 'GothamBold';
     background: white;
-    padding: 1em 1em 1em 1em;
+    padding: 1.5em 1.5em 1.5em 1.5em;
     border-radius: calc(15px/1.5);
     border:none;
     cursor: pointer;
