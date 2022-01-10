@@ -14,12 +14,17 @@
    </div> -->
   <div class="header" id="header">
     <a href="/" style="text-decoration: none;"><p class="logo" style="display: inline; vertical-align: middle;font-size: 1.2em; margin-top: 0;text-decoration: none;margin-left: 2em;">METSET</p></a>
+    {% if session['loggedin'] == True %}
+    <a href="/profile"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;margin-right: 2em;">Profile</p></a>
+
+    {% else %}
     <a href="/register"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;margin-right: 2em;">Register</p></a>
+    {% endif %}
     <a href="#"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;">Contact</p></a>
     <a href="#"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;">Product</p></a>
     <a href="#"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;">About</p></a>
     <a href="#"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;">Home</p></a>
-
+   
   </div>
   <center>
    <div class="hero"> 

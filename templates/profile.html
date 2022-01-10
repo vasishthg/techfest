@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metset | Home</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='')}}" type="image/x-icon">
+</head>
+<body>
+  <!-- <div class="preloader"><h1 class="preloadertxt" style="color: white; font-weight: 100;">Metset</h1>
+    <center><div class="loader"></div></center>
+   </div> -->
+  <div class="header" id="header">
+    <a href="/" style="text-decoration: none;"><p class="logo" style="display: inline; vertical-align: middle;font-size: 1.2em; margin-top: 0;text-decoration: none;margin-left: 2em;">METSET</p></a>
+    {% if session['loggedin'] == True %}
+    <a href="/profile"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;margin-right: 2em;">Profile</p></a>
+
+    {% else %}
+    <a href="/register"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;margin-right: 2em;">Register</p></a>
+    {% endif %}
+    <a href="#"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;">Contact</p></a>
+    <a href="#"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;">Product</p></a>
+    <a href="#"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;">About</p></a>
+    <a href="#"><p class="headerlinks" style="display: inline; vertical-align: middle; font-weight: 100; padding-left: 2em; float: right; margin-top: 0;">Home</p></a>
+   
+  </div>
+  <center>
+   <div class="hero"> 
+     <h1 class="herotxt" id="ampup" style="top: 2em;">Hello</h1>
+     <br>
+     <br>
+     <h1 class="herotxt" id="ampup2" style="top: 10em;">Logged in as: {{session['email']}}</h1>
+     <br>
+   </div>  
+  </center>
+
+   <a class="herotxt" id='ampup3' style="font-size:2em; text-decoration: none; top: 19em; float: right; right: 0;" href="logout">Logout</a>
+   
+   
+
+</body>
+</html>

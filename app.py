@@ -4,15 +4,9 @@ import MySQLdb.cursors
 import re
 import time
 from werkzeug.utils import redirect
-import logging
-import socket
 
 app = Flask(__name__)
-hostname = socket.gethostname()
-IPaddr = socket.gethostbyname(hostname)
-logging.basicConfig(filename='log.log', encoding='utf-8')
-details = ('Visitor: ', hostname, 'IP Address: ', IPaddr)
-logging.error(details)
+
 
 app.secret_key = 'your secret key'
 
@@ -72,10 +66,26 @@ def register():
            cursor.execute('INSERT INTO accounts VALUES (NULL, %s, %s, %s, %s)', (firstname, lastname, email, password))
            mysql.connection.commit()
            msg = 'Registration successful.'
+           return redirect('/login')
     
     elif request.method == 'POST':
         msg='Registration Incomplete!'
 
     return render_template('register.html', msg=msg)
+
+@app.route('/profile')
+def profile():
+    if session['loggedin'] ==True:
+        return render_template('profile.html')
+    else:
+        return redirect('/')
+
+@app.route('/logout')
+def logout():
+    session.pop('loggedin', None)
+    session.pop('id', None)
+    session.pop('username', None)
+    return redirect(url_for('home'))
+
 if __name__ == "__main__":
     app.run(debug=True)
